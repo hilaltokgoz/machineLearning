@@ -1,6 +1,7 @@
 
 import pandas as pd
 from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split #veriyi train ve test olarak ayırır.
 
 #Preprocessing (Ön Hazırlık)
 
@@ -35,6 +36,7 @@ df.info()
 
 y=df['fiyat'] #bağımlı değişken
 x=df.drop( "fiyat", axis=1) #bağımsız değişken. Fiyat hariç her şey.
+
 
 lm = LinearRegression() #model oluşturuldu
 model =lm.fit(x,y) #model eğitildi.
