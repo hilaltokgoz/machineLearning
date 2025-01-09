@@ -47,3 +47,9 @@ print("Train Model score:", score) #0.3802, %30 doğru tahmin etti.
 
 #Train öncesi %100, sonrası %30 doğru tahmin etti. Overfitting(verileri ezberlemiş) var.
 
+#Görselleştirme
+# Karar ağacını .dot formatında oluştur
+
+dot = export_graphviz(model)
+image = graphviz.Source(dot)
+image.render("decision_tree", format="png") #decision_tree.png adında bir dosya oluşturur.
